@@ -8,14 +8,8 @@ import java.util.*;
 public class BitmapSort {
 
     private ArrayList<Integer> array;
+    private ArrayList<Integer> sortedArray;
     private BitSet map = new BitSet();
-
-    /**
-     * Default constructor for BitmapSort
-     */
-    public BitmapSort() {
-
-    }
 
     /**
      * Constructor for existing sets
@@ -34,11 +28,19 @@ public class BitmapSort {
     }
 
     /**
-     * 
-     * @return
+     * Sorts the given array and returns the sorted array
+     * @return a sorted array
      */
-    public ArrayList<Integer> getSorted() {
-
+    public ArrayList<Integer> sort() {
+        for (int i:array) {
+            map.flip(i);
+        }
+        for (int j = 0; j < map.size(); j++) {
+            if (map.get(j)) {
+                sortedArray.add(j);
+            }
+        }
+        return sortedArray;
     }
 
 }
