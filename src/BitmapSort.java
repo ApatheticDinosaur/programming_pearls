@@ -8,7 +8,7 @@ import java.util.*;
 public class BitmapSort {
 
     private ArrayList<Integer> array;
-    private ArrayList<Integer> sortedArray;
+    private ArrayList<Integer> sortedArray = new ArrayList<>();
     private BitSet map = new BitSet();
 
     /**
